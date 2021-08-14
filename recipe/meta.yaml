@@ -1,5 +1,5 @@
 {% set name = "texmaker" %}
-{% set version = "5.0.4" %}
+{% set version = "5.1.0" %}
 
 package:
   name: {{ name }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://www.xm1math.net/texmaker/texmaker-{{ version }}.tar.bz2
-  sha256: 1de3ab3f6d6bee37a7d0b528ca1cbb7ce8e7aef5ec6a4405aff2caf9d12bd0e2
+  sha256: c6f99427db99b67eeebb4dae122504dd4b101890b353d8cf25848b5c74c2187e
 
 build:
   number: 0
-  skip: True  # [not linux]
+  skip: true  # [not linux]
 
 requirements:
   build:
@@ -47,7 +47,7 @@ about:
   license: GPL-2.0-only
   license_family: GPL2
   license_file: license.txt
-  summary: 'Free cross-platform LaTeX editor'
+  summary: Free cross-platform LaTeX editor
 
 extra:
   recipe-maintainers:
