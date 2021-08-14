@@ -3,6 +3,10 @@
 mkdir build
 cd build
 
+## because qmake.
+ln -s ${CXX} ${PREFIX}/bin/g++ || true
+ln -s ${CXX} ${PREFIX}/bin/gcc || true
+
 qmake \
     PREFIX=$PREFIX \
     QMAKE_CC=${CC} \
@@ -18,3 +22,6 @@ make -j$CPU_COUNT
 make check
 sed -i "s:(INSTALL_ROOT)/usr:(INSTALL_ROOT)$PREFIX:g" Makefile
 make install
+
+rm -f ${PREFIX}/bin/gcc
+rm -f ${PREFIX}/bin/g++
