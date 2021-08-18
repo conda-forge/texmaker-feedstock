@@ -1,5 +1,5 @@
 {% set name = "texmaker" %}
-{% set version = "5.1.0" %}
+{% set version = "5.1.1" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://www.xm1math.net/texmaker/texmaker-{{ version }}.tar.bz2
-  sha256: c6f99427db99b67eeebb4dae122504dd4b101890b353d8cf25848b5c74c2187e
+  sha256: 80034992749620c37e074b803ad3e297c11b8f25ade04fb13b13ac791f3b0dde
 
 build:
   number: 0
