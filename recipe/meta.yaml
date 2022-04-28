@@ -19,6 +19,7 @@ requirements:
     - jom  # [win]
     - sed  # [not win]
     - {{ compiler('c') }}
+    - sysroot_linux-64 2.17  # [linux64]
     - {{ compiler('cxx') }}
     - {{ cdt('expat-devel') }}  # [linux]
     - {{ cdt('libxfixes-devel') }}  # [linux]
