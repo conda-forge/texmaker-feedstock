@@ -1,0 +1,25 @@
+From 985a033f4296fc6bbd4caacd4a87667b540185b1 Mon Sep 17 00:00:00 2001
+From: Ista Zahn <istazahn@gmail.com>
+Date: Fri, 29 Apr 2022 12:16:49 -0400
+Subject: [PATCH] fix libgl
+
+---
+ texmaker.pro | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/texmaker.pro b/texmaker.pro
+index b68a64f..75e160c 100644
+--- a/texmaker.pro
++++ b/texmaker.pro
+@@ -10,6 +10,8 @@ TARGET	 = texmaker
+ TEXMAKERVERSION=5.1.3
+ DEFINES += TEXMAKERVERSION=$${TEXMAKERVERSION}
+ 
++QMAKE_LIBS_OPENGL = $$(BUILD_PREFIX)/$$(HOST)/sysroot/usr/lib64/libGL.so
++
+ equals(QT_MAJOR_VERSION, 6) {
+ QT += core gui widgets xml network printsupport concurrent core-private qml core5compat
+ } else {
+-- 
+2.35.3
+
