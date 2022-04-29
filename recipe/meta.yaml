@@ -8,6 +8,8 @@ package:
 source:
   url: https://www.xm1math.net/texmaker/texmaker-{{ version }}.tar.bz2
   sha256: bfa52e5e0e3c61d5258ea8c69ea527f6bd20f0e23fe2da43b80aee00b2609f61
+  patches:
+    - 0001-fix-libgl.patch
 
 build:
   number: 0
@@ -24,6 +26,7 @@ requirements:
     - {{ cdt('expat-devel') }}  # [linux]
     - {{ cdt('libxfixes-devel') }}  # [linux]
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
+    - {{ cdt('libglvnd-glx') }}  # [linux]
     - {{ cdt('mesa-dri-drivers') }}  # [linux]
     - {{ cdt('libselinux') }}  # [linux]
     - {{ cdt('libxdamage') }}  # [linux]
@@ -38,6 +41,8 @@ requirements:
     - qt
     - texlive-core  # [not win]
   run:
+    - qt
+    - texlive-core  # [not win]
 
 test:
   commands:

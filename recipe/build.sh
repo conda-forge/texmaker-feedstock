@@ -4,8 +4,8 @@ mkdir build
 cd build
 
 ## because qmake.
-ln -s ${CXX} ${PREFIX}/bin/g++ || true
-ln -s ${CXX} ${PREFIX}/bin/gcc || true
+ln -sfT ${CXX} ${PREFIX}/bin/g++ || true
+ln -sfT ${CXX} ${PREFIX}/bin/gcc || true
 
 qmake \
     PREFIX=$PREFIX \
