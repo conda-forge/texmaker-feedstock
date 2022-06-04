@@ -12,7 +12,7 @@ source:
     - 0001-fix-libgl.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not linux]
 
 requirements:
@@ -38,10 +38,10 @@ requirements:
     - {{ cdt('libxscrnsaver-devel') }}  # [linux]    
   host:
     - xorg-libxfixes  # [linux]
-    - qt
+    - qt-main
     - texlive-core  # [not win]
   run:
-    - qt
+    - qt-main
     - texlive-core  # [not win]
 
 test:
