@@ -1,11 +1,11 @@
-About texmaker
-==============
+About texmaker-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/texmaker-feedstock/blob/main/LICENSE.txt)
 
 Home: https://www.xm1math.net/texmaker/
 
 Package license: GPL-2.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/texmaker-feedstock/blob/main/LICENSE.txt)
 
 Summary: Free cross-platform LaTeX editor
 
@@ -30,7 +30,7 @@ Current build status
               <td>linux_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13312&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/texmaker-feedstock?branchName=main&jobName=linux&configuration=linux_64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/texmaker-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_" alt="variant">
                 </a>
               </td>
             </tr>
