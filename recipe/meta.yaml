@@ -12,7 +12,7 @@ source:
     - 0001-fix-libgl.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not linux]
 
 requirements:
@@ -23,23 +23,14 @@ requirements:
     - {{ compiler('c') }}
     - sysroot_linux-64 2.17  # [linux64]
     - {{ compiler('cxx') }}
-    - {{ cdt('expat-devel') }}  # [linux]
-    - {{ cdt('libxfixes-devel') }}  # [linux]
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - {{ cdt('libglvnd-glx') }}  # [linux]
-    - {{ cdt('mesa-dri-drivers') }}  # [linux]
-    - {{ cdt('libselinux') }}  # [linux]
-    - {{ cdt('libxdamage') }}  # [linux]
-    - {{ cdt('libxxf86vm') }}  # [linux]
-    - {{ cdt('libxext') }}     # [linux]
-    - {{ cdt('libxcb') }}  # [linux]
-    - {{ cdt('libxau') }}  # [linux]
-    - {{ cdt('libxscrnsaver') }}  # [linux]
-    - {{ cdt('libxscrnsaver-devel') }}  # [linux]    
   host:
     - xorg-libxfixes  # [linux]
     - qt-main
     - texlive-core  # [not win]
+    - expat                     # [linux]
+    - xorg-libxfixes                # [linux]
+    - libgl-devel                    # [linux]
+    - xorg-libxscrnsaver                # [linux]    
   run:
     - qt-main
     - texlive-core  # [not win]
